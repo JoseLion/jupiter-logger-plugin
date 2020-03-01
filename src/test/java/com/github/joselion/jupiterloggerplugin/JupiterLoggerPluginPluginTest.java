@@ -4,9 +4,11 @@
 package com.github.joselion.jupiterloggerplugin;
 
 import org.gradle.testfixtures.ProjectBuilder;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import org.gradle.api.Project;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  * A simple unit test for the 'com.github.joselion.jupiterloggerplugin.greeting' plugin.
