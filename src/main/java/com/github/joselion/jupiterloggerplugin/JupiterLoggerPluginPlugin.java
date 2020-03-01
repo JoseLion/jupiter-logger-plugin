@@ -3,8 +3,8 @@
  */
 package com.github.joselion.jupiterloggerplugin;
 
-import org.gradle.api.Project;
 import org.gradle.api.Plugin;
+import org.gradle.api.Project;
 
 /**
  * A simple 'hello world' plugin.
@@ -12,8 +12,8 @@ import org.gradle.api.Plugin;
 public class JupiterLoggerPluginPlugin implements Plugin<Project> {
     public void apply(Project project) {
         // Register a task
-        project.getTasks().register("greeting", task -> {
-            task.doLast(s -> System.out.println("Hello from plugin 'com.github.joselion.jupiterloggerplugin.greeting'"));
-        });
+        project.getTasks().register("greeting", task ->
+            task.doLast(s -> project.getLogger().lifecycle("Hello from plugin 'com.github.joselion.jupiterloggerplugin.greeting'"))
+        );
     }
 }
